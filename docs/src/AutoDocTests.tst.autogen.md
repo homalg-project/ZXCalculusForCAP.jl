@@ -67,25 +67,25 @@ A morphism in CategoryOfZXDiagrams( ) given by a ZX-diagram with 6 vertex labels
   and 0 edges
   [  ].
 
-julia> IdentityMorphism( one ) + IdentityMorphism( two ) == IdentityMorphism( three )
+julia> IdentityMorphism( one ) + IdentityMorphism( two ) == id
 true
 
-julia> AssociatorLeftToRight( zero, one, two ) == IdentityMorphism( three )
+julia> AssociatorLeftToRight( zero, one, two ) == id
 true
 
-julia> AssociatorRightToLeft( zero, one, two ) == IdentityMorphism( three )
+julia> AssociatorRightToLeft( zero, one, two ) == id
 true
 
-julia> LeftUnitor( three ) == IdentityMorphism( three )
+julia> LeftUnitor( three ) == id
 true
 
-julia> LeftUnitorInverse( three ) == IdentityMorphism( three )
+julia> LeftUnitorInverse( three ) == id
 true
 
-julia> RightUnitor( three ) == IdentityMorphism( three )
+julia> RightUnitor( three ) == id
 true
 
-julia> RightUnitorInverse( three ) == IdentityMorphism( three )
+julia> RightUnitorInverse( three ) == id
 true
 
 julia> Braiding( one, two ) == BraidingInverse( two, one )

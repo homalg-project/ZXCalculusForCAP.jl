@@ -2,8 +2,9 @@ name = "ZXCalculusForCAP"
 uuid = "7f222522-6553-468a-9ae8-e55a72f59a4e"
 authors = [
 	"Fabian Zickgraf <f.zickgraf@dashdos.com>",
+	"Mohamed Barakat <mohamed.barakat@uni-siegen.de>",
 ]
-version = "0.2.0"
+version = "0.2.1"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"

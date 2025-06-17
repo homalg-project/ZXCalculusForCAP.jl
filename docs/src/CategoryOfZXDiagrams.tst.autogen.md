@@ -68,7 +68,7 @@ A morphism in CategoryOfZXDiagrams( ) given by a ZX-diagram with 6 vertex labels
   and 0 edges
   [  ].
 
-julia> IsEqualForMorphisms( TensorProductOnMorphisms( IdentityMorphism( one ), IdentityMorphism( two ) ), IdentityMorphism( three ) )
+julia> IsEqualForMorphisms( TensorProductOnMorphisms( IdentityMorphism( one ), IdentityMorphism( two ) ), id )
 true
 
 julia> ZX.cached_precompiled_functions.TensorProductOnMorphismsWithGivenTensorProducts( ZX, 
@@ -77,22 +77,22 @@ julia> ZX.cached_precompiled_functions.TensorProductOnMorphismsWithGivenTensorPr
           TensorProductOnObjects( one, two )
         );
 
-julia> IsEqualForMorphisms( AssociatorLeftToRight( zero, one, two ), IdentityMorphism( three ) )
+julia> IsEqualForMorphisms( AssociatorLeftToRight( zero, one, two ), id )
 true
 
-julia> IsEqualForMorphisms( AssociatorRightToLeft( zero, one, two ), IdentityMorphism( three ) )
+julia> IsEqualForMorphisms( AssociatorRightToLeft( zero, one, two ), id )
 true
 
-julia> IsEqualForMorphisms( LeftUnitor( three ), IdentityMorphism( three ) )
+julia> IsEqualForMorphisms( LeftUnitor( three ), id )
 true
 
-julia> IsEqualForMorphisms( LeftUnitorInverse( three ), IdentityMorphism( three ) )
+julia> IsEqualForMorphisms( LeftUnitorInverse( three ), id )
 true
 
-julia> IsEqualForMorphisms( RightUnitor( three ), IdentityMorphism( three ) )
+julia> IsEqualForMorphisms( RightUnitor( three ), id )
 true
 
-julia> IsEqualForMorphisms( RightUnitorInverse( three ), IdentityMorphism( three ) )
+julia> IsEqualForMorphisms( RightUnitorInverse( three ), id )
 true
 
 julia> IsEqualForMorphisms( Braiding( one, two ), BraidingInverse( two, one ) )

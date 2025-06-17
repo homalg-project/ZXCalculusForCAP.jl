@@ -405,7 +405,7 @@ end );
 ##
 @InstallMethod( H_Gate,
         "",
-        [  ],
+        [ ],
         
   function ( )
     
