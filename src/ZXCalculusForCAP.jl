@@ -24,7 +24,7 @@ function ObjectConstructor(cat::IsCategoryOfZXDiagrams.abstract_type, n::Int)
 end
 
 ##
-function MorphismConstructor(s::IsZXDiagramObject.abstract_type, graph::Tuple{Vector{String}, Vector{Vector{Int64}}}, t::IsZXDiagramObject.abstract_type)
+function MorphismConstructor(s::IsObjectInCategoryOfZXDiagrams.abstract_type, graph::Tuple{Vector{String}, Vector{Vector{Int64}}}, t::IsObjectInCategoryOfZXDiagrams.abstract_type)
 	MorphismConstructor(s, [graph[1], map(edge -> [ BigInt( edge[1] ), BigInt( edge[2] ) ], graph[2])], t)
 end
 

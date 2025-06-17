@@ -5,20 +5,32 @@ julia> using CAP; using MonoidalCategories; using ZXCalculusForCAP
 julia> true
 true
 
-julia> zero = ObjectConstructor( ZX, BigInt( 0 ) )
-<An object in Category of ZX-diagrams representing 0 input/output vertices>
+julia> zero = Qubits( 0 )
+<An object in CategoryOfZXDiagrams( ) representing 0 input/output vertices>
 
-julia> one = ObjectConstructor( ZX, BigInt( 1 ) )
-<An object in Category of ZX-diagrams representing 1 input/output vertices>
+julia> one = Qubits( 1 )
+<An object in CategoryOfZXDiagrams( ) representing 1 input/output vertices>
 
-julia> two = ObjectConstructor( ZX, BigInt( 2 ) )
-<An object in Category of ZX-diagrams representing 2 input/output vertices>
+julia> two = Qubits( 2 )
+<An object in CategoryOfZXDiagrams( ) representing 2 input/output vertices>
 
-julia> three = ObjectConstructor( ZX, BigInt( 3 ) )
-<An object in Category of ZX-diagrams representing 3 input/output vertices>
+julia> three = Qubits( 3 )
+<An object in CategoryOfZXDiagrams( ) representing 3 input/output vertices>
+
+julia> zero == 0 / ZX
+true
+
+julia> one == 1 / ZX
+true
+
+julia> two == 2 / ZX
+true
+
+julia> three == 3 / ZX
+true
 
 julia> Display( three )
-An object in Category of ZX-diagrams representing 3 input/output vertices.
+An object in CategoryOfZXDiagrams( ) representing 3 input/output vertices.
 
 julia> id = IdentityMorphism( three );
 
@@ -37,7 +49,7 @@ julia> PreCompose( IdentityMorphism( zero ), coev );
 julia> ZX.cached_precompiled_functions.PreCompose( ZX, IdentityMorphism( TensorProduct( three, three ) ), ev );
 
 julia> Display( PreCompose( coev, ev ) )
-A morphism in Category of ZX-diagrams given by a ZX diagram with 0 vertex labels
+A morphism in CategoryOfZXDiagrams( ) given by a ZX-diagram with 0 vertex labels
   [  ],
   inputs
   [  ],
@@ -47,7 +59,7 @@ A morphism in Category of ZX-diagrams given by a ZX diagram with 0 vertex labels
   [  ].
 
 julia> Display( PreCompose( ev, coev ) )
-A morphism in Category of ZX-diagrams given by a ZX diagram with 6 vertex labels
+A morphism in CategoryOfZXDiagrams( ) given by a ZX-diagram with 6 vertex labels
   [ "neutral", "neutral", "neutral", "neutral", "neutral", "neutral" ],
   inputs
   [ 0, 1, 2, 0, 1, 2 ],
@@ -86,27 +98,27 @@ true
 julia> IsEqualForMorphisms( Braiding( one, two ), BraidingInverse( two, one ) )
 true
 
-julia> X_1_1 = MorphismConstructor( one, [ [ "neutral", "X", "neutral" ], [ BigInt( 0 ) ], [ BigInt( 2 ) ], [ [ BigInt( 0 ), BigInt( 1 ) ], [ BigInt( 2 ), BigInt( 1 ) ] ] ], one );
+julia> X_1_1 = X_Spider( 1, 1 );
 
 julia> IsWellDefinedForMorphisms( X_1_1 )
 true
 
-julia> Z_1_1 = MorphismConstructor( one, [ [ "neutral", "Z", "neutral" ], [ BigInt( 0 ) ], [ BigInt( 2 ) ], [ [ BigInt( 0 ), BigInt( 1 ) ], [ BigInt( 2 ), BigInt( 1 ) ] ] ], one );
+julia> Z_1_1 = Z_Spider( 1, 1 );
 
 julia> IsWellDefinedForMorphisms( Z_1_1 )
 true
 
-julia> H = MorphismConstructor( one, [ [ "neutral", "H", "neutral" ], [ BigInt( 0 ) ], [ BigInt( 2 ) ], [ [ BigInt( 0 ), BigInt( 1 ) ], [ BigInt( 2 ), BigInt( 1 ) ] ] ], one );
+julia> H = H_Gate( );
 
 julia> IsWellDefinedForMorphisms( H )
 true
 
-julia> X_1_2 = MorphismConstructor( one, [ [ "neutral", "X", "neutral", "neutral" ], [ BigInt( 0 ) ], [ BigInt( 2 ), BigInt( 3 ) ], [ [ BigInt( 0 ), BigInt( 1 ) ], [ BigInt( 2 ), BigInt( 1 ) ], [ BigInt( 3 ), BigInt( 1 ) ] ] ], two );
+julia> X_1_2 = X_Spider( 1, 2 );
 
 julia> IsWellDefinedForMorphisms( X_1_2 )
 true
 
-julia> Z_2_1 = MorphismConstructor( two, [ [ "neutral", "neutral", "Z", "neutral" ], [ BigInt( 0 ), BigInt( 1 ) ], [ BigInt( 3 ) ], [ [ BigInt( 0 ), BigInt( 2 ) ], [ BigInt( 1 ), BigInt( 2 ) ], [ BigInt( 3 ), BigInt( 2 ) ] ] ], one );
+julia> Z_2_1 = Z_Spider( 2, 1 );
 
 julia> IsWellDefinedForMorphisms( Z_2_1 )
 true
