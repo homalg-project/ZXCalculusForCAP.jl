@@ -173,8 +173,7 @@ julia> X_1_2_Z_2_1 = PreCompose( X_1_2, Z_2_1 )
 julia> IsWellDefinedForMorphisms( X_1_2_Z_2_1 )
 true
 
-julia> #
-        tmp_dir = DirectoryTemporary( );
+julia> tmp_dir = DirectoryTemporary( );
 
 julia> ExportAsQGraphFile( X_1_2_Z_2_1, Filename( tmp_dir, "X_1_2_Z_2_1" ) )
 
