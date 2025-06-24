@@ -29,10 +29,13 @@ true
 julia> three == 3 * one
 true
 
-julia> id = IdentityMorphism( three )
+julia> id = IdentityMorphism( one )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> id == 3 * IdentityMorphism( one )
+julia> id3 = IdentityMorphism( three )
+<A morphism in CategoryOfZXDiagrams( )>
+
+julia> id3 == 3 * id
 true
 
 julia> ev = EvaluationForDual( three )
@@ -73,32 +76,31 @@ A morphism in CategoryOfZXDiagrams( ) given by a ZX-diagram with 6 vertex labels
   and 0 edges
   [  ].
 
-julia> IdentityMorphism( one ) + IdentityMorphism( two ) == id
+julia> IdentityMorphism( one ) + IdentityMorphism( two ) == id3
 true
 
-julia> AssociatorLeftToRight( zero, one, two ) == id
+julia> AssociatorLeftToRight( zero, one, two ) == id3
 true
 
-julia> AssociatorRightToLeft( zero, one, two ) == id
+julia> AssociatorRightToLeft( zero, one, two ) == id3
 true
 
-julia> LeftUnitor( three ) == id
+julia> LeftUnitor( three ) == id3
 true
 
-julia> LeftUnitorInverse( three ) == id
+julia> LeftUnitorInverse( three ) == id3
 true
 
-julia> RightUnitor( three ) == id
+julia> RightUnitor( three ) == id3
 true
 
-julia> RightUnitorInverse( three ) == id
+julia> RightUnitorInverse( three ) == id3
 true
 
 julia> Braiding( one, two ) == BraidingInverse( two, one )
 true
 
-julia> #
-        X_1_1 = X_Spider( 1, 1 )
+julia> X_1_1 = X_Spider( 1, 1 )
 <A morphism in CategoryOfZXDiagrams( )>
 
 julia> IsWellDefinedForMorphisms( X_1_1 )
@@ -132,6 +134,14 @@ julia> X_1_2_Z_2_1 = PreCompose( X_1_2, Z_2_1 )
 <A morphism in CategoryOfZXDiagrams( )>
 
 julia> IsWellDefinedForMorphisms( X_1_2_Z_2_1 )
+true
+
+julia> GHZ = ( 3 * X_Spider( 0, 1 ) ) * ( id + H + id ) *
+               ( X_1_2 + Z_Spider( 1, 1 ) + X_1_2 ) *
+               ( id + Z_Spider( 3, 1 ) + id )
+<A morphism in CategoryOfZXDiagrams( )>
+
+julia> IsWellDefinedForMorphisms( GHZ )
 true
 
 ```
