@@ -4,7 +4,7 @@ authors = [
 	"Fabian Zickgraf <f.zickgraf@dashdos.com>",
 	"Mohamed Barakat <mohamed.barakat@uni-siegen.de>",
 ]
-version = "0.2.1"
+version = "0.2.2"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"

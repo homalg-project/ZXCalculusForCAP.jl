@@ -79,7 +79,7 @@
                 
             elseif (label == "H")
                 
-                return "yellow";
+                return "orange";
                 
             elseif (StartsWith( label, "Z" ))
                 

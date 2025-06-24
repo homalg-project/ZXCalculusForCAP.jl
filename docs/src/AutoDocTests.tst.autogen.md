@@ -26,8 +26,14 @@ true
 julia> three == zero + three
 true
 
+julia> three == 3 * one
+true
+
 julia> id = IdentityMorphism( three )
 <A morphism in CategoryOfZXDiagrams( )>
+
+julia> id == 3 * IdentityMorphism( one )
+true
 
 julia> ev = EvaluationForDual( three )
 <A morphism in CategoryOfZXDiagrams( )>
