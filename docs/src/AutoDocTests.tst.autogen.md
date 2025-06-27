@@ -103,37 +103,37 @@ true
 julia> X_1_1 = X_Spider( 1, 1 )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> IsWellDefinedForMorphisms( X_1_1 )
+julia> IsWellDefined( X_1_1 )
 true
 
 julia> Z_1_1 = Z_Spider( 1, 1 )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> IsWellDefinedForMorphisms( Z_1_1 )
+julia> IsWellDefined( Z_1_1 )
 true
 
 julia> H = H_Gate( )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> IsWellDefinedForMorphisms( H )
+julia> IsWellDefined( H )
 true
 
 julia> X_1_2 = X_Spider( 1, 2 )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> IsWellDefinedForMorphisms( X_1_2 )
+julia> IsWellDefined( X_1_2 )
 true
 
 julia> Z_2_1 = Z_Spider( 2, 1 )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> IsWellDefinedForMorphisms( Z_2_1 )
+julia> IsWellDefined( Z_2_1 )
 true
 
 julia> X_1_2_Z_2_1 = PreCompose( X_1_2, Z_2_1 )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> IsWellDefinedForMorphisms( X_1_2_Z_2_1 )
+julia> IsWellDefined( X_1_2_Z_2_1 )
 true
 
 julia> GHZ = ( 3 * X_Spider( 0, 1 ) ) * ( id + H + id ) *
@@ -141,7 +141,7 @@ julia> GHZ = ( 3 * X_Spider( 0, 1 ) ) * ( id + H + id ) *
                ( id + Z_Spider( 3, 1 ) + id )
 <A morphism in CategoryOfZXDiagrams( )>
 
-julia> IsWellDefinedForMorphisms( GHZ )
+julia> IsWellDefined( GHZ )
 true
 
 ```
