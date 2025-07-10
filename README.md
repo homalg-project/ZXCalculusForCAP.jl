@@ -9,7 +9,7 @@
 
 <!-- END HEADER -->
 
-This is the Julia version of [CAP-based][CAP_based] package [ZXCalculusForCAP][ZXCalculusForCAP].
+This is the Julia version of the [CAP-based][CAP_based] package [ZXCalculusForCAP][ZXCalculusForCAP].
 
 [CAP_based]: https://homalg-project.github.io/docs/CAP_project-based/
 [ZXCalculusForCAP]: https://homalg-project.github.io/pkg/ZXCalculusForCAP
