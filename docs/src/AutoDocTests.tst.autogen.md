@@ -1,6 +1,6 @@
 
 ```jldoctest AutoDocTests
-julia> using CAP; using MonoidalCategories; using ZXCalculusForCAP
+julia> using CAP, MonoidalCategories, ZXCalculusForCAP
 
 julia> true
 true
@@ -147,7 +147,7 @@ true
 ```
 
 ```jldoctest AutoDocTests
-julia> using CAP; using MonoidalCategories; using ZXCalculusForCAP
+julia> using CAP, MonoidalCategories, ZXCalculusForCAP
 
 julia> true
 true

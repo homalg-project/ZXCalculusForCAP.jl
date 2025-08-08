@@ -1,2 +1,4 @@
 using Test, Documenter, ZXCalculusForCAP
-doctest(ZXCalculusForCAP)
+
+# test upto whitespaces
+doctest(ZXCalculusForCAP; doctestfilters=[r"\s+" => ""])
