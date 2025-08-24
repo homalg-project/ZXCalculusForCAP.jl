@@ -1,11 +1,12 @@
 name = "ZXCalculusForCAP"
 uuid = "7f222522-6553-468a-9ae8-e55a72f59a4e"
 authors = [
-	"Fabian Zickgraf <fabian.zickgraf@uni-siegen.de>"
+	"Mohamed Barakat <mohamed.barakat@uni-siegen.de>",
+	"Fabian Zickgraf <f.zickgraf@dashdos.com>"
 ]
 
-# Transpiled from GAP's ZXCalculusForCAP v2025.08-01
-version = "0.2.7"
+# Transpiled from GAP's ZXCalculusForCAP v2025.08-03
+version = "0.2.8"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
